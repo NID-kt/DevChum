@@ -1,0 +1,49 @@
+.buddy{
+    border-bottom: 1px solid #e0e0e0; 
+}
+
+body{
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    padding : 10px 20px;
+    width: 220px;
+    margin : 0;
+}
+
+.chara{
+    width: 220px;
+    height: 220px;
+}
+
+nav ul{
+    list-style: none;
+    background-color: #fff;
+    display: flex;
+    padding : 0;
+}
+
+nav ul li{
+    padding : 12px 17px;
+    border: 1px solid #e0e0e0;
+}
+
+nav li:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+nav li:last-child {
+    border-radius: 0 10px 10px 0;
+
+}
+
+.main-ui-icon{
+    width: 30px;
+    height: 30px;
+}
+
+nav{
+    font-size: 10px;
+    color: #000;
+    margin: 0;
+    text-align: center;
+}
