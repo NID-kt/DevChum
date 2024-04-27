@@ -20,28 +20,30 @@ import { Layout } from "src/layout";
 const AccountSettingPage: CustomNextPage = () => {
   return (
     <div>
-      <div className="pb-4 border-b border-glay-300 w-60 h-72">
+      <div className="pb-4 border-b border-gray-300 w-60 h-72">
         <h1 className="text-xl font-bold whitespace-nowrap">Account</h1>
         <div className="w-60 h-60 p-4 py-14">
-          <div className="h-8 w-auto border-2 border-glay-500 rounded-lg"></div>
+          <div className="h-20 w-auto border-2 border-glay-500 rounded-lg text-center text-xl">
+            <p className="">Login to Github</p>
+          </div>
         </div>
       </div>
       <nav className="text-center text-xs">
         <ul className="list-none flex mt-4 w-60">
           <Link href="/buddyselect">
-            <li className="w-20 h-20 pt-4 border-solid border-gray-300 border rounded-l-xl item-center border-collapse">
+            <li className="w-20 h-20 pt-4 border-solid border-gray-300 border rounded-l-xl items-center border-collapse">
               <img src="./images/pad.png" alt="buddyselect" className="w-9 h-9 m-auto" />
               <p className="text-center text-xs">Buddy</p>
             </li>
           </Link>
           <Link href="/durationsetting">
-            <li className="w-20 h-20 pt-4 border-solid border-gray-300 border item-center border-collapse">
+            <li className="w-20 h-20 pt-4 border-solid border-gray-300 border items-center border-collapse">
               <img src="./images/grave.png" alt="buddyselect" className="w-9 h-9 m-auto" />
               <p className="text-center text-xs">Duration</p>
             </li>
           </Link>
           <Link href="/accountsetting">
-            <li className="w-20 h-20 pt-4 border-solid border-gray-300 border rounded-r-xl item-center border-collapse">
+            <li className="w-20 h-20 pt-4 border-solid border-gray-300 border rounded-r-xl items-center border-collapse">
               <img src="./images/person.png" alt="buddyselect" className="w-9 h-9 m-auto" />
               <p className="text-center text-xs">Account</p>
             </li>
