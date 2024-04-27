@@ -2,7 +2,7 @@
 module.exports = {
   reactStrictMode: true,
   swcMinify: true,
-  basePath: "/dist",
+  basePath: "/dest",
   assetPrefix: "./",
   pageExtensions: ["page.tsx", "page.ts"],
 

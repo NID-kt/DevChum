@@ -22,8 +22,8 @@ const AccountSettingPage: CustomNextPage = () => {
     <div>
       <div className="pb-4 border-b border-glay-300 w-60 h-72">
         <h1 className="text-xl font-bold whitespace-nowrap">Account</h1>
-        <div className="w-60 h-60 p-4">
-          <h2 className="text-l whitespace-nowrap">Your Account:</h2>
+        <div className="w-60 h-60 p-4 py-14">
+          <div className="h-8 w-auto border-2 border-glay-500 rounded-lg"></div>
         </div>
       </div>
       <nav className="text-center text-xs">

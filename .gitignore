@@ -40,5 +40,5 @@ yarn-error.log*
 /wasm/target
 
 # extensions
-extensions/dist
+extensions/dest
 extensions/*.js
