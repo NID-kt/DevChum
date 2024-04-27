@@ -13,4 +13,10 @@ module.exports = {
       (isServer ? "../" : "") + "static/wasm/webassembly.wasm";
     return config;
   },
+
+  exportPathMap: function () {
+    return {
+      "/": { page: "/" },
+    };
+  },
 };

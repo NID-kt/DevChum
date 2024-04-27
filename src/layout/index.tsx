@@ -4,7 +4,7 @@ import { LayoutErrorBoundary } from "./LayoutErrorBoundary";
 
 export const Layout = (page: NextPage) => {
   return (
-    <main className="py-2 px-8 w-80 h-80">
+    <main className="py-3 px-5 w-64 h-96 items-center">
       <LayoutErrorBoundary>{page}</LayoutErrorBoundary>
 
       {/* Loading Chrome scripts */}
