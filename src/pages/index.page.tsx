@@ -19,14 +19,20 @@ const Button = dynamic(
 
 const IndexPage: CustomNextPage = () => {
   return (
-    <div>
-      <h1 className="text-2xl font-bold whitespace-nowrap">Chrome Extension Template</h1>
-      <Button />
-      <div>
-        <Link href="/sample">
-          <a className="text-blue-500 underline">to sample page</a>
-        </Link>
-      </div>
+    <div className="w-80 h-80">
+      <h1 className="text-2xl font-bold whitespace-nowrap">Your buddy</h1>
+      <img src="/image/buddy.png" alt="buddy" className="w-40 h-40" />
+      <div></div>
+      <nav className="text-center text-xs">
+        <ul className="list-none flex">
+          <Link href="/BuddySelect">
+            <li className="px-4 py-3 border-solid border-gray-300 border-2 first:rounded-l-xl">
+              <img src="/image/pad.png" alt="buddyselect" />
+              <p>Buddy</p>
+            </li>
+          </Link>
+        </ul>
+      </nav>
     </div>
   );
 };
