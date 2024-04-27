@@ -17,12 +17,14 @@ import { Layout } from "src/layout";
 //   },
 //);
 
-const IndexPage: CustomNextPage = () => {
+const AccountSettingPage: CustomNextPage = () => {
   return (
     <div>
       <div className="pb-4 border-b border-glay-300 w-60 h-72">
-        <h1 className="text-xl font-bold whitespace-nowrap">Your buddy</h1>
-        <img src="./images/buddy/gif0047.gif" alt="buddy" className="w-60 h-60" />
+        <h1 className="text-xl font-bold whitespace-nowrap">Account</h1>
+        <div className="w-60 h-60 p-4">
+          <h2 className="text-l whitespace-nowrap">Your Account:</h2>
+        </div>
       </div>
       <nav className="text-center text-xs">
         <ul className="list-none flex mt-4 w-60">
@@ -50,6 +52,6 @@ const IndexPage: CustomNextPage = () => {
   );
 };
 
-export default IndexPage;
+export default AccountSettingPage;
 
-IndexPage.getLayout = Layout;
+AccountSettingPage.getLayout = Layout;

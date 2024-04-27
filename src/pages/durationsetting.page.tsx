@@ -17,13 +17,14 @@ import { Layout } from "src/layout";
 //   },
 //);
 
-const IndexPage: CustomNextPage = () => {
+const DurationSettingPage: CustomNextPage = () => {
   return (
     <div>
       <div className="pb-4 border-b border-glay-300 w-60 h-72">
-        <h1 className="text-xl font-bold whitespace-nowrap">Your buddy</h1>
+        <h1 className="text-xl font-bold whitespace-nowrap">Duration</h1>
         <img src="./images/buddy/gif0047.gif" alt="buddy" className="w-60 h-60" />
       </div>
+
       <nav className="text-center text-xs">
         <ul className="list-none flex mt-4 w-60">
           <Link href="/buddyselect">
@@ -50,6 +51,6 @@ const IndexPage: CustomNextPage = () => {
   );
 };
 
-export default IndexPage;
+export default DurationSettingPage;
 
-IndexPage.getLayout = Layout;
+DurationSettingPage.getLayout = Layout;

@@ -20,7 +20,7 @@ import { Layout } from "src/layout";
 const BuddySelectPage: CustomNextPage = () => {
   return (
     <div>
-      <div className="pb-4 border-b border-glay-300">
+      <div className="pb-4 border-b border-glay-300 w-60 h-72">
         <h1 className="text-xl font-bold whitespace-nowrap">Your buddy</h1>
         <img src="./images/buddy/gif0047.gif" alt="buddy" className="w-60 h-60" />
       </div>
@@ -32,13 +32,13 @@ const BuddySelectPage: CustomNextPage = () => {
               <p className="text-center text-xs">Buddy</p>
             </li>
           </Link>
-          <Link href="/DurationSetting">
+          <Link href="/durationsetting">
             <li className="w-20 h-20 pt-4 border-solid border-gray-300 border item-center border-collapse">
               <img src="./images/grave.png" alt="buddyselect" className="w-9 h-9 m-auto" />
               <p className="text-center text-xs">Duration</p>
             </li>
           </Link>
-          <Link href="/AccountSetting">
+          <Link href="/accountsetting">
             <li className="w-20 h-20 pt-4 border-solid border-gray-300 border rounded-r-xl item-center border-collapse">
               <img src="./images/person.png" alt="buddyselect" className="w-9 h-9 m-auto" />
               <p className="text-center text-xs">Account</p>
