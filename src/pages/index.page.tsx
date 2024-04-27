@@ -22,26 +22,26 @@ const IndexPage: CustomNextPage = () => {
     <div>
       <div className="pb-4 border-b border-glay-300">
         <h1 className="text-xl font-bold whitespace-nowrap">Your buddy</h1>
-        <img src="./images/buddy/gif0047.gif" alt="buddy" className="w-56 h-56" />
+        <img src="./images/buddy/gif0047.gif" alt="buddy" className="w-60 h-60" />
       </div>
       <nav className="text-center text-xs">
-        <ul className="list-none flex mt-4">
-          <Link href="/BuddySelect">
-            <li className="w-20 h-20 px-4 py-3 border-solid border-gray-300 border rounded-l-xl item-center border-collapse">
-              <img src="./images/pad.png" alt="buddyselect" />
-              <p className="text-center">Buddy</p>
+        <ul className="list-none flex mt-4 w-60">
+          <Link href="/buddyselect">
+            <li className="w-20 h-20 pt-4 border-solid border-gray-300 border rounded-l-xl item-center border-collapse">
+              <img src="./images/pad.png" alt="buddyselect" className="w-9 h-9 m-auto" />
+              <p className="text-center text-xs">Buddy</p>
             </li>
           </Link>
           <Link href="/DurationSetting">
-            <li className="w-20 h-20 px-4 py-3 border-solid border-gray-300 border item-center border-collapse">
-              <img src="./images/grave.png" alt="buddyselect" />
-              <p className="text-center">Duration</p>
+            <li className="w-20 h-20 pt-4 border-solid border-gray-300 border item-center border-collapse">
+              <img src="./images/grave.png" alt="buddyselect" className="w-9 h-9 m-auto" />
+              <p className="text-center text-xs">Duration</p>
             </li>
           </Link>
           <Link href="/AccountSetting">
-            <li className="w-20 h-20 px-4 py-3 border-solid border-gray-300 border rounded-r-xl item-center border-collapse">
-              <img src="./images/person.png" alt="buddyselect" />
-              <p className="text-center">Account</p>
+            <li className="w-20 h-20 pt-4 border-solid border-gray-300 border rounded-r-xl item-center border-collapse">
+              <img src="./images/person.png" alt="buddyselect" className="w-9 h-9 m-auto" />
+              <p className="text-center text-xs">Account</p>
             </li>
           </Link>
         </ul>
