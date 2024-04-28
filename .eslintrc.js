@@ -16,7 +16,10 @@ module.exports = {
   ],
   rules: {
     "no-console": ["error", { allow: ["warn", "info", "error"] }],
-    "no-restricted-syntax": ["error", { selector: "TSEnumDeclaration", message: "Don't declare enums" }],
+    "no-restricted-syntax": [
+      "error",
+      { selector: "TSEnumDeclaration", message: "Don't declare enums" },
+    ],
     "prefer-arrow-callback": "error",
     "prefer-const": "error",
     "func-style": ["error", "expression"],
@@ -39,7 +42,7 @@ module.exports = {
     "react-hooks/exhaustive-deps": "warn",
     "import/newline-after-import": "error",
     "import/no-default-export": "error",
-    "simple-import-sort/imports": "error",
+    "simple-import-sort/imports": "warn",
     "simple-import-sort/exports": "error",
     "tailwindcss/classnames-order": "warn",
     "tailwindcss/no-custom-classname": "warn",
@@ -48,7 +51,7 @@ module.exports = {
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/consistent-type-imports": ["warn", { prefer: "type-imports" }],
-    "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+    "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
     "@typescript-eslint/naming-convention": [
       "error",
       { selector: ["typeAlias", "typeParameter"], format: ["PascalCase"] },

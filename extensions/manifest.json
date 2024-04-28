@@ -4,7 +4,8 @@
   "name": "Chrome Extension Template",
   "description": "description",
   "action": {
-    "default_popup": "./dest/index.html"
+    "default_popup": "./dest/index.html",
+    "default_icon": "./dest/images/pad.png"
   },
   "content_scripts": [
     {
@@ -15,5 +16,5 @@
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["tabs", "storage"]
+  "permissions": ["tabs", "storage", "identity"]
 }
