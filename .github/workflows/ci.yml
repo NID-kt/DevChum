@@ -24,7 +24,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Export
-        run: pnpm Export
+        run: pnpm export
 
       - name: Upload
         uses: actions/upload-artifact@v4
