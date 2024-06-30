@@ -4,7 +4,7 @@
   "name": "DevChum",
   "build": {
     "dockerfile": "Dockerfile",
-    "cacheFrom": "ghcr.io/nid-kt/DevChum-devcontainer"
+    "cacheFrom": "ghcr.io/nid-kt/devchum-devcontainer"
   },
 
   // Features to add to the dev container. More info: https://containers.dev/features.

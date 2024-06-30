@@ -23,6 +23,6 @@ jobs:
       - name: Push DevContainer
         uses: devcontainers/ci@v0.3
         with:
-          imageName: ghcr.io/nid-kt/DevChum-devcontainer
-          cacheFrom: ghcr.io/nid-kt/DevChum-devcontainer
+          imageName: ghcr.io/nid-kt/devchum-devcontainer
+          cacheFrom: ghcr.io/nid-kt/devchum-devcontainer
           push: always
