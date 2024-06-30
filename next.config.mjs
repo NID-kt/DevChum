@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig  = {
+const nextConfig = {
   reactStrictMode: true,
   basePath: "/dest",
-  output: 'export',
-  distDir: 'extensions/dest',
+  output: "export",
+  distDir: "extensions/dest",
 
   // webpack: (config, { isServer }) => {
   //   config.experiments = {

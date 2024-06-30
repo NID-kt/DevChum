@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
+import Image from "next/image";
 import Link from "next/link";
 
 // chrome APIを使用するためdynamic importし、browser側でのみ読み込まれるようにする
