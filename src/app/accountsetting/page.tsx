@@ -1,8 +1,7 @@
-import { CustomNextPage } from "next";
+'use client'
+
+import Image from 'next/image'
 import Link from "next/link";
-import { Layout } from "src/layout";
-import mockSampleCase from "../public/mockData.json";
-import { MockData } from "src/types/accountsetting";
 
 const handleLoginToGithub = async () => {
   if (typeof window !== "undefined" && typeof chrome !== "undefined") {
@@ -18,9 +17,7 @@ const handleLoginToGithub = async () => {
   }
 };
 
-const mockData: MockData = mockSampleCase;
-
-const AccountSettingPage: CustomNextPage = () => {
+const AccountSettingPage = () => {
   return (
     <div>
       <div className="pb-4 w-60 h-72 border-b border-gray-300">
@@ -40,19 +37,19 @@ const AccountSettingPage: CustomNextPage = () => {
         <ul className="flex mt-4 w-60 list-none">
           <Link href="/buddyselect">
             <li className="items-center pt-4 w-20 h-20 rounded-l-xl border border-gray-300 border-solid border-collapse">
-              <img src="./images/pad.png" alt="buddyselect" className="m-auto w-9 h-9" />
+              <Image src="./images/pad.png" alt="buddyselect" className="m-auto w-9 h-9" />
               <p className="text-xs text-center">Buddy</p>
             </li>
           </Link>
           <Link href="/durationsetting">
             <li className="items-center pt-4 w-20 h-20 border border-gray-300 border-solid border-collapse">
-              <img src="./images/grave.png" alt="buddyselect" className="m-auto w-9 h-9" />
+              <Image src="./images/grave.png" alt="buddyselect" className="m-auto w-9 h-9" />
               <p className="text-xs text-center">Duration</p>
             </li>
           </Link>
           <Link href="/accountsetting">
             <li className="items-center pt-4 w-20 h-20 rounded-r-xl border border-gray-300 border-solid border-collapse">
-              <img src="./images/person.png" alt="buddyselect" className="m-auto w-9 h-9" />
+              <Image src="./images/person.png" alt="buddyselect" className="m-auto w-9 h-9" />
               <p className="text-xs text-center">Account</p>
             </li>
           </Link>
@@ -63,5 +60,3 @@ const AccountSettingPage: CustomNextPage = () => {
 };
 
 export default AccountSettingPage;
-
-AccountSettingPage.getLayout = Layout;

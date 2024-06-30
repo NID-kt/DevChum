@@ -1,4 +1,4 @@
-import type { Message } from "src/types";
+import type { Message } from "../types";
 
 // You may need to use relative path import.
 // import { } from "../constants";

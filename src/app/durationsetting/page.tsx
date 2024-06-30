@@ -1,7 +1,7 @@
-import type { CustomNextPage } from "next";
-//import dynamic from "next/dynamic";
+'use client'
+
+import Image from 'next/image'
 import Link from "next/link";
-import { Layout } from "src/layout";
 
 // chrome APIを使用するためdynamic importし、browser側でのみ読み込まれるようにする
 // const Button = dynamic(
@@ -17,7 +17,7 @@ import { Layout } from "src/layout";
 //   },
 //);
 
-const DurationSettingPage: CustomNextPage = () => {
+const DurationSettingPage = () => {
   return (
     <div>
       <div className="pb-4 border-b border-gray-300 w-60 h-72">
@@ -55,19 +55,19 @@ const DurationSettingPage: CustomNextPage = () => {
         <ul className="list-none flex mt-4 w-60">
           <Link href="/buddyselect">
             <li className="w-20 h-20 pt-4 border-solid border-gray-300 border rounded-l-xl items-center border-collapse">
-              <img src="./images/pad.png" alt="buddyselect" className="w-9 h-9 m-auto" />
+              <Image src="./images/pad.png" alt="buddyselect" className="w-9 h-9 m-auto" />
               <p className="text-center text-xs">Buddy</p>
             </li>
           </Link>
           <Link href="/durationsetting">
             <li className="w-20 h-20 pt-4 border-solid border-gray-300 border items-center border-collapse">
-              <img src="./images/grave.png" alt="buddyselect" className="w-9 h-9 m-auto" />
+              <Image src="./images/grave.png" alt="buddyselect" className="w-9 h-9 m-auto" />
               <p className="text-center text-xs">Duration</p>
             </li>
           </Link>
           <Link href="/accountsetting">
             <li className="w-20 h-20 pt-4 border-solid border-gray-300 border rounded-r-xl items-center border-collapse">
-              <img src="./images/person.png" alt="buddyselect" className="w-9 h-9 m-auto" />
+              <Image src="./images/person.png" alt="buddyselect" className="w-9 h-9 m-auto" />
               <p className="text-center text-xs">Account</p>
             </li>
           </Link>
@@ -78,5 +78,3 @@ const DurationSettingPage: CustomNextPage = () => {
 };
 
 export default DurationSettingPage;
-
-DurationSettingPage.getLayout = Layout;
