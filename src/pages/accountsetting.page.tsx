@@ -1,7 +1,7 @@
 import { CustomNextPage } from "next";
 import Link from "next/link";
 import { Layout } from "src/layout";
-import mockSampleCase from "../public/mockData.json";
+import mockSampleCase from "../../public/mockData.json";
 import { MockData } from "src/types/accountsetting";
 
 const handleLoginToGithub = async () => {

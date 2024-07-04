@@ -7,7 +7,7 @@
     "start": "next start",
     "lint": "next lint",
     "bundle": "webpack build --mode production --config ./webpack/webpack.config.js",
-    "export": "next build && next export -o extensions/dest && pnpm run copyImages && pnpm run bundle",
+    "export": "next build && next export -o extensions/dest && pnpm run bundle",
     "copyImages": "ncp src/public/img extensions/dest/images"
   },
   "dependencies": {
