@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import type { CustomNextPage } from "next";
+"use client";
 
-import { Layout } from "src/layout";
+import { useState, useEffect } from "react";
+
 import Navigation from "src/components/navigation";
 import LoginWithGithub from "src/components/login-with-github";
 import Buddy from "src/components/buddy";
@@ -66,7 +66,7 @@ const pollForAccessToken = async (deviceCode: string) => {
   }
 };
 
-const IndexPage: CustomNextPage = () => {
+const IndexPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [accessToken, setAccessToken] = useState("");
   const [userCode, setUserCode] = useState<string>();
@@ -216,5 +216,3 @@ const IndexPage: CustomNextPage = () => {
 };
 
 export default IndexPage;
-
-IndexPage.getLayout = Layout;
