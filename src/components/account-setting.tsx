@@ -1,25 +1,7 @@
-import { CustomNextPage } from "next";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-import { Layout } from "src/layout";
-import mockSampleCase from "../../public/mockData.json";
-import { MockData } from "src/types/accountsetting";
-import Navigation from "src/components/navigation";
-
-const mockData: MockData = mockSampleCase;
-
-const AccountSettingPage: CustomNextPage = () => {
-  const [accessToken, setAccessToken] = useState("");
+const AccountSetting = ({ accessToken }: { accessToken: string }) => {
   const [githubUser, setGithubUser] = useState<{ login: string; avatar_url: string } | null>(null);
-
-  useEffect(() => {
-    chrome.storage.local.get(["accessToken"], (result) => {
-      setAccessToken(result.accessToken);
-      if (result.accessToken) {
-        fetchGithubUser(result.accessToken);
-      }
-    });
-  }, []);
 
   const fetchGithubUser = async (token: string) => {
     try {
@@ -34,11 +16,10 @@ const AccountSettingPage: CustomNextPage = () => {
       console.error("Failed to fetch GitHub user:", error);
     }
   };
+  fetchGithubUser(accessToken);
 
   const handleRemoveToken = () => {
-    chrome.storage.local.remove(["accessToken"], () => {
-      setAccessToken("");
-    });
+    chrome.storage.local.remove(["accessToken"]);
   };
 
   return (
@@ -75,6 +56,4 @@ const AccountSettingPage: CustomNextPage = () => {
   );
 };
 
-export default AccountSettingPage;
-
-AccountSettingPage.getLayout = Layout;
+export default AccountSetting;
