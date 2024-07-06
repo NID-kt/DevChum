@@ -4,6 +4,8 @@ import type { CustomNextPage } from "next";
 import { Layout } from "src/layout";
 import Navigation from "src/components/navigation";
 import LoginWithGithub from "src/components/login-with-github";
+import Buddy from "src/components/buddy";
+import DurationSetting from "src/components/duration-setting";
 import AccountSetting from "src/components/account-setting";
 
 const requestDeviceCode = async () => {
@@ -164,18 +166,11 @@ const IndexPage: CustomNextPage = () => {
   const renderContent = () => {
     switch (currentView) {
       case "buddy":
-        return (
-          <div className="pb-4 border-b border-gray-300 w-60 h-72">
-            <h1 className="text-xl font-bold whitespace-nowrap mb-2 border-b border-gray-300">
-              Your buddy
-            </h1>
-            <img src="./images/buddy/gif0047.gif" alt="buddy" className="w-60 h-60" />
-          </div>
-        );
+        return <Buddy />;
       case "duration-setting":
-        return <div>Duration Setting Component</div>;
+        return <DurationSetting />;
       case "account-setting":
-        return <AccountSetting accessToken={accessToken} />;
+        return <AccountSetting accessToken={accessToken} setAccessToken={setAccessToken} />;
       default:
         return null;
     }

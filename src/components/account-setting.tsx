@@ -1,6 +1,12 @@
 import { useState } from "react";
 
-const AccountSetting = ({ accessToken }: { accessToken: string }) => {
+const AccountSetting = ({
+  accessToken,
+  setAccessToken,
+}: {
+  accessToken: string;
+  setAccessToken: (token: string) => void;
+}) => {
   const [githubUser, setGithubUser] = useState<{ login: string; avatar_url: string } | null>(null);
 
   const fetchGithubUser = async (token: string) => {
@@ -20,6 +26,7 @@ const AccountSetting = ({ accessToken }: { accessToken: string }) => {
 
   const handleRemoveToken = () => {
     chrome.storage.local.remove(["accessToken"]);
+    setAccessToken("");
   };
 
   return (
