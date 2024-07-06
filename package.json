@@ -16,7 +16,7 @@
     "react-error-boundary": "^4"
   },
   "devDependencies": {
-    "@types/chrome": "^0.0.164",
+    "@types/chrome": "^0.0.268",
     "@types/node": "16.11.7",
     "@types/react": "17.0.35",
     "autoprefixer": "^10.4.19",
