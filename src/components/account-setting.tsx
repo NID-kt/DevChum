@@ -2,10 +2,10 @@ import { useState } from "react";
 
 const AccountSetting = ({
   accessToken,
-  setAccessToken,
+  onLogout,
 }: {
   accessToken: string;
-  setAccessToken: (token: string) => void;
+  onLogout: () => void;
 }) => {
   const [githubUser, setGithubUser] = useState<{ login: string; avatar_url: string } | null>(null);
 
@@ -22,12 +22,8 @@ const AccountSetting = ({
       console.error("Failed to fetch GitHub user:", error);
     }
   };
-  fetchGithubUser(accessToken);
 
-  const handleRemoveToken = () => {
-    chrome.storage.local.remove(["accessToken"]);
-    setAccessToken("");
-  };
+  fetchGithubUser(accessToken);
 
   return (
     <>
@@ -51,7 +47,7 @@ const AccountSetting = ({
             </div>
           )}
           <button
-            onClick={handleRemoveToken}
+            onClick={onLogout}
             className="w-full bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
           >
             Logout

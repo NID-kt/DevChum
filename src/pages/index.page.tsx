@@ -163,6 +163,12 @@ const IndexPage: CustomNextPage = () => {
     await requestNewCode();
   };
 
+  const onLogout = () => {
+    chrome.storage.local.remove("accessToken");
+    setAccessToken("");
+    initializeGithubLogin();
+  };
+
   const renderContent = () => {
     switch (currentView) {
       case "buddy":
@@ -170,7 +176,7 @@ const IndexPage: CustomNextPage = () => {
       case "duration-setting":
         return <DurationSetting />;
       case "account-setting":
-        return <AccountSetting accessToken={accessToken} setAccessToken={setAccessToken} />;
+        return <AccountSetting accessToken={accessToken} onLogout={onLogout} />;
       default:
         return null;
     }
